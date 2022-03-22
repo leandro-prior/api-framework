@@ -1,0 +1,18 @@
+<Configuration>
+    <Appenders>
+        <File name="A1" fileName="logfile.log" append="true">
+            <Log4j1XmlLayout />
+        </File>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%level - %m%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.apache.log4j.xml" level="info">
+            <AppenderRef ref="A1"/>
+        </Logger>
+        <Root level="info">
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </Loggers>
+</Configuration>
